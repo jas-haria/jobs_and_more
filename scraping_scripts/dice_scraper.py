@@ -19,6 +19,7 @@ def refresh_jobs():
         writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
         writer.writeheader()
         for data in jobs_data:
+            # remove jobs in cities other than predefined cities
             writer.writerow(data)
         csvfile.truncate()
 
@@ -48,7 +49,6 @@ def get_job_urls():
     driver.quit()    
     return links
     
-
 def get_job_from_url(url):
     html = urlopen(url)
     bs = BeautifulSoup(html.read(), "lxml")
