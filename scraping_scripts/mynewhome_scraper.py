@@ -35,3 +35,4 @@ def refresh_homes():
         driver.quit()
     
 refresh_homes()
+# check if cities mentioned below get clicked
