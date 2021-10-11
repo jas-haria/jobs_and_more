@@ -10,13 +10,17 @@ import csv
 # get company and location from dice data, no location for remote and 0 value?
 
 def refresh_salaries():
-    dice_data = pd.read_csv('../downloaded_data/dice_data')
+    dice_data = pd.read_csv('downloaded_data/dice_data')
+    city_mapping = pd.read_cv('predefined_data/state_url_mapping.csv')
     companies = []
+    salaries = []
     for index, row in dice_data.iterrows():
         company_dict = {}
-        company_dict['company'] = row['company']
-        company_dict['title'] = row['title']
-        company_dict['location'] = row['location']
+        company_dict = row
+        for index1, row1 in city_mapping.iterrows():
+            if company_dict['location'] == row1['dice']:
+                company_dict['location'] = row1['career_builder']
+                break
         companies.append(company_dict)
     for company in companies:
         driver = get_driver()
@@ -33,15 +37,20 @@ def refresh_salaries():
         time.sleep(3)
         soup = BeautifulSoup(driver.page_source, 'html.parser')
         sal = soup.findAll('div', { "class" : "fl-l"} )
-        salary = sal[0].text
-        company['salary'] = salary
+        try:
+            salary = sal[0].text
+        except:
+            continue;
+        if salary == '$0':
+            continue
+        company_with_salary = company
+        company_with_salary['salary'] = salary
+        salaries.append(company_with_salary)
         driver.quit()
-    csv_columns = ['title', 'company', 'location', 'salary']
-    with open('../downloaded_data/career_builder_data', 'w') as csvfile:
+    csv_columns = ['title', 'company', 'location', 'url', 'summary', 'salary']
+    with open('downloaded_data/career_builder_data', 'w') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
         writer.writeheader()
-        for data in companies:
+        for data in salaries:
             writer.writerow(data)
         csvfile.truncate()
-
-print(refresh_salaries())

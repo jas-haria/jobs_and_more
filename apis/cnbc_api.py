@@ -2,10 +2,11 @@ import requests
 from datetime import datetime
 import pandas as pd
 import csv
+from config import config
 
 def get_news_data():
     # put key in config file
-    companies = pd.read_csv('../predefined_data/company_list.csv')
+    companies = pd.read_csv('predefined_data/company_list.csv')
     news_items = []
     for symbol in companies['Abbreviation']:
         news_items.extend(call_api(symbol))
@@ -24,7 +25,7 @@ def call_api(symbol):
     querystring = {"symbol":symbol,"page":"1","pageSize":"5"}
     headers = {
         'x-rapidapi-host': "cnbc.p.rapidapi.com",
-        'x-rapidapi-key': "d8cb8f820emsh18db97648694a5bp1920fbjsneab9c02820ba"
+        'x-rapidapi-key': config['cnbc_api_key']
     }
     response = requests.request("GET", url, headers=headers, params=querystring)
     json_response = response.json()
@@ -38,7 +39,5 @@ def call_api(symbol):
         data_dict['published_date'] = published_date.strftime('%B %d, %Y')
         data_dict['url'] = result['url']
         data.append(data_dict)
-    print(len(data), symbol)
     return data
 
-get_news_data()
