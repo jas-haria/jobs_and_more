@@ -37,9 +37,46 @@ def fedTax(job_data, fed_tax, state_tax, status):
                 if job_data['salary'][i]>=x and job_data['salary'][i]<y:
                     job_data['Fed_Tax'][i]= fed_tax['Rate'][j]
                     break
+                
+def state_tax(job_data, tax, status):
+    if status:
+        for i in range(0,len(job_data)):
+            for j in range(0,len(tax)):
+                if(tax[('Unnamed: 0_level_0','State')][j])._contains_(job_data['state_abb'][i]):
+                    if (job_data['salary'][i] > tax[('Single Filer','Brackets')][j] and job_data['salary'][i] < tax[('Single Filer','Brackets')][j+1]):
+                        job_data['state_tax'][i] = tax[('Single Filer','Rates')][j]
+        for i in range(0,len(job_data)):
+            if job_data['state_abb'][i] == 'Ill.':
+                job_data['state_tax'][i] =0.0495
+            elif job_data['state_abb'][i]=='Mass.':
+                job_data['state_tax'][i] =0.05    
+            elif job_data['state_abb'][i]=='Tex.':
+                job_data['state_tax'][i] =0
+            elif job_data['state_abb'][i] == 'Ariz.':
+                job_data['state_tax'][i] = 0.0259
+            elif job_data['state_abb'][i] == 'Ind.':
+                job_data['state_tax'][i] = 0.0259 
+                
+    else:
+        for i in range(0,len(job_data)):
+            for j in range(0,len(tax)):
+                if(tax[('Unnamed: 0_level_0','State')][j])._contains_(job_data['tax_form'][i]):
+                    if (job_data['salary'][i] > tax[('Married Filing Jointly','Brackets')][j] and job_data['salary'][i] < tax[('Married Filing Jointly','Brackets')][j+1]):
+                        job_data['state_tax'][i] = tax[('Married Filing Jointly','Rates')][j]
+        for i in range(0,len(job_data)):
+            if job_data['state_abb'][i] == 'Ill.':
+                job_data['state_tax'][i] =0.0495
+            elif job_data['state_abb'][i]=='Mass.':
+                job_data['state_tax'][i] =0.05    
+            elif job_data['state_abb'][i]=='Tex.':
+                job_data['state_tax'][i] =0
+            elif job_data['state_abb'][i] == 'Ariz.':
+                job_data['state_tax'][i] = 0.0259
+            elif job_data['state_abb'][i] == 'Ind.':
+                job_data['state_tax'][i] = 0.0259
 
 def get_total_salary(married = False, num_of_beds = 1):
-    job_data = pd.read_csv('downloaded_data/career_builder_data.csv')
+    job_data = pd.read_csv('downloaded_data/career_builder_data')
     state_url = pd.read_csv('downloaded_data/state_url_mapping.csv')
     state_tax = pd.read_csv('downloaded_data/state_tax_mapping.csv')
     fed_tax = pd.read_excel("downloaded_files/federal_tax.xlsx",sheet_name='Table 1',header = 1)
@@ -60,6 +97,8 @@ def get_total_salary(married = False, num_of_beds = 1):
                     if(state_tax['Abbreviation'][k]== state_url['State'][j]):
                         job_data['state_abb'][i] = state_tax['Tax Form'][k]
     fedTax(job_data, fed_tax, state_tax, married)
+    state_tax(job_data, tax, married)
+    print(job_data)
     
     
     

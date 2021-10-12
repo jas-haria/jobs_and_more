@@ -32,7 +32,7 @@ def refresh_homes():
         time.sleep(2)
         cityLink.click()
         time.sleep(3)
-        for i in range(1, 2):
+        for i in range(1, 4):
             filter = wait.until(EC.visibility_of_element_located((By.XPATH, "//a[contains(@onclick, 'toggleFilter()')]")))
             filter.click()
             select = wait.until(EC.visibility_of_element_located((By.XPATH, "//select[contains(@id, 'beds')]")))
@@ -44,13 +44,16 @@ def refresh_homes():
             update.click()
             time.sleep(3)
             soup = BeautifulSoup(driver.page_source, 'html.parser')
-            urlList = soup.findAll('div',{ "id" : "listings"} )[0]
-            addUrl = "https://www.mynewplace.com"
-            for i in urlList:
-                resultDict = {}
-                resultDict['url'] = addUrl+i.get("href")
-                resultDict['city'] = city
-                urls_list.append(resultDict)
+            try:
+                urlList = soup.findAll('div',{ "id" : "listings"} )[0]
+                addUrl = "https://www.mynewplace.com"
+                for i in urlList:
+                    resultDict = {}
+                    resultDict['url'] = addUrl+i.get("href")
+                    resultDict['city'] = city
+                    urls_list.append(resultDict)
+            except:
+                continue
         driver.quit()
     for element in urls_list:
         house_options.extend(url2Dic(element['url'], element['city']))
