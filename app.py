@@ -13,7 +13,7 @@ input_prompt = '''
 
 def refresh_stats():
     print('Scraping jobs from dice.com ...')
-    #refresh_jobs()
+    refresh_jobs()
     print('Scraping salaries from careerbuilder.com ...')
     refresh_salaries()
     print('Scraping house rentals from mynewhome.com ...')
