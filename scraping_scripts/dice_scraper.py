@@ -1,4 +1,4 @@
-from utils.util_service import get_driver
+from utils.util_service import get_driver, encode_dictionary
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -9,34 +9,43 @@ import pandas as pd
 import csv
 
 def refresh_jobs():
-    links = get_job_urls()
+    cities = pd.read_csv('predefined_data/state_url_mapping.csv')['dice']
+    companies = pd.read_csv('predefined_data/company_list.csv')['Companies']
+    links = get_job_urls(cities, companies)
     jobs_data = []
     for link in links:
-        jobs_data.append(get_job_from_url(link))
+        try:
+            jobs_data.append(get_job_from_url(link))
+        except:
+            continue
     csv_columns = ['title', 'company', 'location', 'url', 'summary']
     with open('downloaded_data/dice_data', 'w') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
         writer.writeheader()
         for data in jobs_data:
-            cities = pd.read_csv('predefined_data/state_url_mapping.csv')['dice']
             found_city = False
             for city in cities:
                 if city.split(',')[0] in data['location']:
-                    data['location'] = city
+                    data['location'] = str(city)
                     found_city = True
                     break
             if not found_city:
                 continue
-            writer.writerow(data)
+            found_company = False
+            for company in companies:
+                if data['company'] in company:
+                    data['company'] = company
+                    found_company = True
+            if not found_company:
+                continue
+            writer.writerow(encode_dictionary(data))
         csvfile.truncate()
 
-def get_job_urls():
+def get_job_urls(cities, companies):
     driver = get_driver()
     links = set()
-    cities = pd.read_csv('predefined_data/state_url_mapping.csv')['dice']
-    companies = pd.read_csv('predefined_data/company_list.csv')['Companies']
-    for company in companies[:2]:
-        for city in cities[:5]:
+    for company in companies:
+        for city in cities:
             driver.get('https://www.dice.com/')
             time.sleep(3)
             wait = WebDriverWait(driver, 3)

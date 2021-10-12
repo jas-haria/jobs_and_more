@@ -1,20 +1,402 @@
-Price,Address,Address,NumOfBed,Amenities,City,Url
-500.0,"312 NE H Ave, Fabens, TX 79838","312 NE H Ave, Fabens, TX 79838",2,[],el-paso-tx,https://www.mynewplace.com/apartment/n-and-p-apartments-fabens-tx-507649324650
-745,"2990 Trawood Dr, El Paso, TX 79936","2990 Trawood Dr, El Paso, TX 79936",1,"['12 Month Terms Available', '24-Hour Emergency Maintenance']",el-paso-tx,https://www.mynewplace.com/apartment/wind-tree-el-paso-tx-707849641034
-1020.0,"2990 Trawood Dr, El Paso, TX 79936","2990 Trawood Dr, El Paso, TX 79936",2,"['12 Month Terms Available', '24-Hour Emergency Maintenance']",el-paso-tx,https://www.mynewplace.com/apartment/wind-tree-el-paso-tx-707849641034
-Please Call,"368 Shadow Mountain Drive, El Paso, TX 79912","368 Shadow Mountain Drive, El Paso, TX 79912",3,"['Pantry', 'Dishwasher', 'Garbage Disposal', 'Stove', '9"" Ceilings', 'Ceiling Fans', '2"" Custom Blinds']",el-paso-tx,https://www.mynewplace.com/apartment/shadow-mountain-ridge-el-paso-tx-807274326002
-700,"5249 Wren Avenue, El Paso, TX 79924","5249 Wren Avenue, El Paso, TX 79924",1,[],el-paso-tx,https://www.mynewplace.com/apartment/agave-courtyard-el-paso-tx-607176048448
-850.0,"5249 Wren Avenue, El Paso, TX 79924","5249 Wren Avenue, El Paso, TX 79924",2,[],el-paso-tx,https://www.mynewplace.com/apartment/agave-courtyard-el-paso-tx-607176048448
-1000.0,"5249 Wren Avenue, El Paso, TX 79924","5249 Wren Avenue, El Paso, TX 79924",3,[],el-paso-tx,https://www.mynewplace.com/apartment/agave-courtyard-el-paso-tx-607176048448
-Please Call,"4000 Venice Blvd, Los Angeles, CA 90019","4000 Venice Blvd, Los Angeles, CA 90019",2,[],el-paso-tx,https://www.mynewplace.com/apartment/4000-venice-blvd-los-angeles-los-angeles-ca-108817671247
-665.0,"4700 Maxwell Avenue, El Paso, TX 79904","4700 Maxwell Avenue, El Paso, TX 79904",2,['Air Conditioning'],el-paso-tx,https://www.mynewplace.com/apartment/665-2-bedroom-in-4700-maxwell-avenue-el-paso-tx-2v8531432997
-1050.0,"508 Valle Cromo, Socorro, TX 79927","508 Valle Cromo, Socorro, TX 79927",3,"['Washer/Dryer Hook ups', 'Stove/Oven', 'Swamp Cooler', 'Refrigerator', 'Cable-ready']",el-paso-tx,https://www.mynewplace.com/apartment/508-valle-cromo-socorro-socorro-tx-601456422741
-1475.0,"5444 Santiago Roque Dr, El Paso, TX 79934","5444 Santiago Roque Dr, El Paso, TX 79934",3,"['Cable-ready', 'Washer/Dryer in Unit', 'Fireplace', 'Disposal', 'DishWasher', 'refrigerator in unit', 'Air Conditioning', 'Pets Allowed']",el-paso-tx,https://www.mynewplace.com/apartment/5444-santiago-roque-dr-el-paso-el-paso-tx-102319883454
-1150.0,"9946 Rosa M Richardson Ave, Socorro, TX 79927","9946 Rosa M Richardson Ave, Socorro, TX 79927",3,"['single garage', 'Air Conditioning', 'Pets Allowed', 'refrigerator in unit']",el-paso-tx,https://www.mynewplace.com/apartment/9946-rosa-m-richardson-ave-socorro-socorro-tx-205862283712
-1100.0,"5101 Joe Herrera, El Paso, TX 79924","5101 Joe Herrera, El Paso, TX 79924",3,"['Pets Allowed', 'refrigerated air', 'Single Level']",el-paso-tx,https://www.mynewplace.com/apartment/5101-joe-herrera-el-paso-el-paso-tx-3f6545776083
-745,"2990 Trawood Dr, El Paso, TX 79936","2990 Trawood Dr, El Paso, TX 79936",1,"['12 Month Terms Available', '24-Hour Emergency Maintenance']",el-paso-tx,https://www.mynewplace.com/apartment/wind-tree-el-paso-tx-707849641034
-1020.0,"2990 Trawood Dr, El Paso, TX 79936","2990 Trawood Dr, El Paso, TX 79936",2,"['12 Month Terms Available', '24-Hour Emergency Maintenance']",el-paso-tx,https://www.mynewplace.com/apartment/wind-tree-el-paso-tx-707849641034
-Please Call,"368 Shadow Mountain Drive, El Paso, TX 79912","368 Shadow Mountain Drive, El Paso, TX 79912",3,"['Pantry', 'Dishwasher', 'Garbage Disposal', 'Stove', '9"" Ceilings', 'Ceiling Fans', '2"" Custom Blinds']",el-paso-tx,https://www.mynewplace.com/apartment/shadow-mountain-ridge-el-paso-tx-807274326002
-700,"5249 Wren Avenue, El Paso, TX 79924","5249 Wren Avenue, El Paso, TX 79924",1,[],el-paso-tx,https://www.mynewplace.com/apartment/agave-courtyard-el-paso-tx-607176048448
-850.0,"5249 Wren Avenue, El Paso, TX 79924","5249 Wren Avenue, El Paso, TX 79924",2,[],el-paso-tx,https://www.mynewplace.com/apartment/agave-courtyard-el-paso-tx-607176048448
-1000.0,"5249 Wren Avenue, El Paso, TX 79924","5249 Wren Avenue, El Paso, TX 79924",3,[],el-paso-tx,https://www.mynewplace.com/apartment/agave-courtyard-el-paso-tx-607176048448
+Price,Address,NumOfBed,Amenities,City,Url
+
+4393.0,"b'560 W 43rd St, New York, NY 10036'",1,"[b'Air Conditioning', b'View', b'Individual Climate Control', b'Dishwasher', b'Microwave', b'Refrigerator']",b'new-york-ny',b'https://www.mynewplace.com/apartment/riverbank-west-new-york-ny-600109576028'
+
+0,"b'33 Hudson St, Jersey City, NJ 07302'",1,"[b""9' Ceilings"", b'Chic Parquet Floors', b'Equipped To Accommodate Hdtv & Broadband', b'Full-Size Ge Washer And Dryer', b'Kitchens W/Ge Profile Appliances', b'Oversized Windows', b'Terraces And Spacious Walk-In Closets*']",b'new-york-ny',b'https://www.mynewplace.com/apartment/liberty-towers-jersey-city-nj-6003q9516009'
+
+5330.0,"b'444 Washington Boulevard , Jersey City, NJ 07310'",1,"[b'Pool', b'Package Receiving', b'Storage Space', b'Fitness Center', b'Elevator']",b'new-york-ny',b'https://www.mynewplace.com/apartment/avalon-cove-jersey-city-nj-0vv309989988'
+
+3595.0,"b'100 River Mews Lane , Edgewater, NJ 07020'",3,"[b'On-site Management', b'On-site Maintenance', b'Newly Renovated Apartments', b'High Speed Internet Available', b'Near Public Transit', b'24-Hour Availability', b'Package Receiving', b'Storage Space']",b'new-york-ny',b'https://www.mynewplace.com/apartment/avalon-at-edgewater-edgewater-nj-60p510184513'
+
+7405.0,"b'11 East First Street , New York, NY 10003'",1,"[b'Spa', b'Laundry', b'Concierge', b'Fitness Center', b'Sundeck', b'High Speed Internet Available']",b'new-york-ny',b'https://www.mynewplace.com/apartment/avalon-bowery-place-new-york-ny-6n0410603289'
+
+6880.0,"b'1 Morningside Drive , New York, NY 10025'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/avalon-morningside-park-new-york-ny-40n013687064'
+
+2349,"b'312 Portside Drive, Edgewater, NJ 07020'",1,"[b'Wheelchair', b'Ceiling Fan', b'Dishwasher', b'Microwave', b'Refrigerator', b'Balcony', b'Dryer', b'Washer']",b'new-york-ny',b'https://www.mynewplace.com/apartment/mariner-s-landing-apartments-edgewater-nj-6q0214229939'
+
+4347.5,"b'312 Portside Drive, Edgewater, NJ 07020'",2,"[b'Wheelchair', b'Ceiling Fan', b'Dishwasher', b'Microwave', b'Refrigerator', b'Balcony', b'Dryer', b'Washer']",b'new-york-ny',b'https://www.mynewplace.com/apartment/mariner-s-landing-apartments-edgewater-nj-6q0214229939'
+
+6346.0,"b'312 Portside Drive, Edgewater, NJ 07020'",3,"[b'Wheelchair', b'Ceiling Fan', b'Dishwasher', b'Microwave', b'Refrigerator', b'Balcony', b'Dryer', b'Washer']",b'new-york-ny',b'https://www.mynewplace.com/apartment/mariner-s-landing-apartments-edgewater-nj-6q0214229939'
+
+5300.0,"b'343 Gold Street , Brooklyn, NY 11201'",1,"[b'Fitness Center', b'On-site Maintenance', b'Clubhouse', b'17,000 sq.ft. Outdoor Urban Park Plaza', b'Courtesy Mail Pickup', b'Courtyards', b'Disability/Wheelchair Accessible', b'On-Site ZipCar', b'Bike racks & bike storage for residents', b'Recycling bins located throughout the']",b'new-york-ny',b'https://www.mynewplace.com/apartment/avalon-fort-greene-brooklyn-ny-6ov832103969'
+
+6088.0,"b'250 W. 50th St. , New York, NY 10019'",1,"[b'Air Conditioning', b'View', b'Furnished', b'Large Closets', b'Individual Climate Control', b'Dishwasher', b'Microwave', b'Window Coverings']",b'new-york-ny',b'https://www.mynewplace.com/apartment/avalon-midtown-west-new-york-ny-701115551347'
+
+4387.0,"b'515 West 52nd St. , New York, NY 10019'",1,"[b'Library', b'Laundry', b'Concierge', b'Package Receiving', b'On-site Management', b'Storage Space', b'Fitness Center', b'On-site Maintenance', b'Sundeck', b'Elevator', b'High Speed Internet Available', b'Transportation', b'24-Hour Availability', b'Bilingual', b'Multiple laundry rooms', b'Party room and media room']",b'new-york-ny',b'https://www.mynewplace.com/apartment/avalon-clinton-new-york-ny-701315581653'
+
+7873.0,"b'525 West 28th Street , New York, NY 10001'",1,"[b'Concierge', b'Package Receiving', b'Fitness Center', b'On-site Maintenance', b'Elevator', b'High Speed Internet Available', b'Transportation', b'Rec Room', b'Central To The 7 Line Subway Extension', b'Leed Registered', b'Steps From Citibike', b'Backyard With Fire Pit And BBQs', b'Online Rent Payments', b'Blocks From Chelsea Piers', b'Bike Storage And Repair Room']",b'new-york-ny',b'https://www.mynewplace.com/apartment/ava-high-line-new-york-ny-401931113216'
+
+2655.0,"b'5665 Kennedy Blvd., Ste 1 , North Bergen, NJ 07047'",1,"[b'Package Receiving', b'Short Term Lease', b'On-site Management', b'Fitness Center', b'On-site Maintenance', b'Elevator', b'High Speed Internet Available', b'Rec Room', b'Clubhouse']",b'new-york-ny',b'https://www.mynewplace.com/apartment/avalon-north-bergen-north-bergen-nj-001939288580'
+
+7825.0,"b'282 11th Avenue , New York, NY 10001'",1,"[b'24/7 concierge service', b'Garage with valet on site', b'Central to the 7-line subway extension', b'Eco-friendly', b'Valet services', b'Walking distance to Avenues', b'Resident lounge w/ entertaining kitchen', b'Pet friendly with pet wash', b'State-of-the-art fitness center']",b'new-york-ny',b'https://www.mynewplace.com/apartment/avalon-west-chelsea-new-york-ny-801245334286'
+
+4752.0,"b'70 Greene St, Jersey City, NJ 07302'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/70-greene-jersey-city-nj-2l1161557283'
+
+4332.0,"b'4 Avenue At Port, West New York, NJ 07093'",3,[b'Free Weights'],b'new-york-ny',b'https://www.mynewplace.com/apartment/the-landings-at-port-imperial-west-new-york-nj-3g1161973440'
+
+3861.0,"b'131 Dudley St, Jersey City, NJ 07302'",2,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/hudson-point-jersey-city-nj-3i1161943814'
+
+4982.0,"b'400 W 37th St, Manhattan, NY 10018'",1,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/hudson-crossing-manhattan-ny-501561993970'
+
+4770.0,"b'71 Broadway, Manhattan, NY 10006'",1,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/71-broadway-manhattan-ny-5k1161963984'
+
+4695.0,"b'1 Harborside Pl, Jersey City, NJ 07311'",2,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/the-pier-jersey-city-nj-9x1761904011'
+
+4991.0,"b'600 Washington St, Manhattan, NY 10014'",1,"[b'Spa', b'Concierge']",b'new-york-ny',b'https://www.mynewplace.com/apartment/600-washington-manhattan-ny-3g1661924183'
+
+4801.0,"b'240 E 27th St, Manhattan, NY 10016'",4,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/parc-east-manhattan-ny-3b1561914287'
+
+3933.0,"b'228 W 71st St, Manhattan, NY 10023'",1,[b'Concierge'],b'new-york-ny',b'https://www.mynewplace.com/apartment/parc-coliseum-manhattan-ny-301461924588'
+
+3650.0,"b'50 W 77th St, Manhattan, NY 10024'",1,[b'Concierge'],b'new-york-ny',b'https://www.mynewplace.com/apartment/parc-77-manhattan-ny-6c1461944599'
+
+3378.0,"b'41 W 86th St, Manhattan, NY 10024'",1,[b'Concierge'],b'new-york-ny',b'https://www.mynewplace.com/apartment/parc-cameron-manhattan-ny-101961924670'
+
+4713.0,"b'111 Lawrence St, Brooklyn, NY 11201'",1,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/the-brooklyner-brooklyn-ny-8q1261954912'
+
+4332.0,"b'777 6th Ave, Manhattan, NY 10001'",1,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/777-6th-avenue-manhattan-ny-1n1661995060'
+
+4976.0,"b'305 W 50th St, Manhattan, NY 10019'",1,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/longacre-house-manhattan-ny-801361935083'
+
+4065.0,"b'140 Riverside Blvd, New York, NY 10069'",1,"[b'Concierge', b'Transportation']",b'new-york-ny',b'https://www.mynewplace.com/apartment/140-riverside-boulevard-new-york-ny-701961945176'
+
+4911.0,"b'160 Riverside Blvd, New York, NY 10069'",1,"[b'Concierge', b'Transportation']",b'new-york-ny',b'https://www.mynewplace.com/apartment/160-riverside-boulevard-new-york-ny-801461915177'
+
+4803.0,"b'180 Riverside Blvd, Manhattan, NY 10023'",1,"[b'Concierge', b'Transportation']",b'new-york-ny',b'https://www.mynewplace.com/apartment/180-riverside-boulevard-manhattan-ny-301861945148'
+
+4798.0,"b'500 W 23rd St, Manhattan, NY 10011'",1,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/ten23-manhattan-ny-301961975284'
+
+4986.0,"b'175 Kent Ave, Brooklyn, NY 11249'",1,[b'Concierge'],b'new-york-ny',b'https://www.mynewplace.com/apartment/175-kent-brooklyn-ny-1m1661915346'
+
+4979.0,"b'105 W 29th St, Manhattan, NY 10001'",1,[b'Concierge'],b'new-york-ny',b'https://www.mynewplace.com/apartment/beatrice-manhattan-ny-101261905463'
+
+4961.0,"b'431 W 37th St, Manhattan, NY 10018'",1,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/mantena-manhattan-ny-6s1461925417'
+
+4988.0,"b'180 Montague St, Brooklyn, NY 11201'",1,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/180-montague-brooklyn-ny-001161985690'
+
+4967.0,"b'245 E 40th St, New York, NY 10016'",1,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/murray-hill-tower-new-york-ny-801161925982'
+
+4795.0,"b'303 E 83rd St, Manhattan, NY 10028'",4,[b'Concierge'],b'new-york-ny',b'https://www.mynewplace.com/apartment/303-east-83rd-manhattan-ny-6n1761926083'
+
+4993.0,"b'300 E 39th St, Manhattan, NY 10016'",1,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/300-east-39th-manhattan-ny-001561986084'
+
+4982.0,"b'505 W 54th St, Manhattan, NY 10019'",1,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/west-54th-manhattan-ny-501161996025'
+
+4997.0,"b'750 Columbus Ave, Manhattan, NY 10025'",3,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/west-96th-manhattan-ny-3z1161936056'
+
+4721.0,"b'77 Park Ave, Hoboken, NJ 07030'",1,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/77-park-avenue-hoboken-nj-601861986162'
+
+4983.0,"b'730 Columbus Ave, Manhattan, NY 10025'",1,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/the-westmont-manhattan-ny-6c1861986164'
+
+4715.0,"b'155 Washington St, Jersey City, NJ 07302'",1,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/portside-towers-jersey-city-nj-8g1561916555'
+
+4945.0,"b'50 E 28th St, New York, NY 10016'",1,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/prism-at-park-avenue-south-new-york-ny-1d1168039312'
+
+4987.0,"b'170 Amsterdam Ave, New York, NY 10023'",1,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/170-amsterdam-new-york-ny-1j1883751525'
+
+6360.0,"b'100 Willoughby Street , Brooklyn, NY 11201'",1,"[b'Air Conditioning', b'Heat']",b'new-york-ny',b'https://www.mynewplace.com/apartment/ava-dobro-brooklyn-ny-4n1487439914'
+
+0,"b'160 Morgan Street, Jersey City, NJ 07302'",1,"[b'Stainless Steel Appliances', b'Ceramic Tile Bathrooms', b'Granite Kitchen Countertops']",b'new-york-ny',b'https://www.mynewplace.com/apartment/the-morgan-at-provost-square-jersey-city-nj-601394606985'
+
+3352.5,"b'50 Christopher Columbus Dr, Jersey City, NJ 07302'",1,"[b'Concierge', b'24-Hour Availability', b'12 Ft Ceilings*', b'BBQ/Picnic Area', b'Floor to Ceiling Windows*', b'Kisi Keyless Entry']",b'new-york-ny',b'https://www.mynewplace.com/apartment/50-columbus-jersey-city-nj-4o2377815651'
+
+5995.0,"b'800 Madison Street , Hoboken, NJ 07030'",3,"[b'Fitness Center', b'Clubhouse', b'BBQ/Picnic Area', b'Sports Courts', b'Pool', b'Sundeck', b'Lounge chairs']",b'new-york-ny',b'https://www.mynewplace.com/apartment/avalon-hoboken-hoboken-nj-0a2694113342'
+
+2345,"b'235 Hudson St, Hoboken, NJ 07030'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/hudson-square-north-hoboken-nj-102696676643'
+
+3320.0,"b'235 Hudson St, Hoboken, NJ 07030'",2,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/hudson-square-north-hoboken-nj-102696676643'
+
+4295.0,"b'235 Hudson St, Hoboken, NJ 07030'",3,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/hudson-square-north-hoboken-nj-102696676643'
+
+5615.0,"b'214 Duffield St, Brooklyn, NY 11201'",1,"[b'View', b'Disposal', b'Furnished', b'Large Closets', b'Dishwasher', b'Microwave', b'Refrigerator', b'Controlled Access']",b'new-york-ny',b'https://www.mynewplace.com/apartment/avalon-willoughby-square-brooklyn-ny-003522840770'
+
+4976.0,"b'239 N 9th St, Brooklyn, NY 11211'",1,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/atelier-brooklyn-ny-403835174176'
+
+7762.0,"b'4-75 48Th Ave, Long Island City, NY 11101'",1,"[b'View', b'Large Closets', b'Dishwasher', b'Microwave', b'Balcony/patio or terrace select homes*', b'Ceramic tile floor in kitchen & bathroom', b'Ceramic tile floor in kitchen and bath', b'City skyline and Park views', b'Floor-to-ceiling windows', b'Gas cooking', b'Granite countertops', b'Hard surface flooring throughout', b'Marble bathroom vanity']",b'new-york-ny',b'https://www.mynewplace.com/apartment/avalon-riverview-long-island-city-ny-504425247339'
+
+3512.5,"b'110 River Dr, Jersey City, NJ 07310'",1,"[b'Concierge', b'Free Weights']",b'new-york-ny',b'https://www.mynewplace.com/apartment/aquablu-newport-jersey-city-nj-807849075099'
+
+3482.5,"b'31 River Ct, Jersey City, NJ 07310'",1,"[b'Concierge', b'Free Weights']",b'new-york-ny',b'https://www.mynewplace.com/apartment/atlantic-newport-jersey-city-nj-7n7549095120'
+
+3370.0,"b'30 River Ct, Jersey City, NJ 07310'",1,"[b'Concierge', b'Free Weights']",b'new-york-ny',b'https://www.mynewplace.com/apartment/east-hampton-newport-jersey-city-nj-807449095141'
+
+3315.0,"b'270 10th St, Jersey City, NJ 07302'",1,"[b'Concierge', b'Free Weights']",b'new-york-ny',b'https://www.mynewplace.com/apartment/embankment-house-hamilton-park-jersey-city-nj-7l7649035122'
+
+4935.0,"b'45 Park Ln S, Jersey City, NJ 07310'",3,"[b'Concierge', b'Free Weights']",b'new-york-ny',b'https://www.mynewplace.com/apartment/laguna-newport-jersey-city-nj-5o7449005133'
+
+2697.5,"b'204 10th St, Jersey City, NJ 07302'",1,"[b'Concierge', b'Free Weights']",b'new-york-ny',b'https://www.mynewplace.com/apartment/lincoln-hamilton-park-jersey-city-nj-407849035144'
+
+2210,"b'25 River Dr S, Jersey City, NJ 07310'",1,"[b'Concierge', b'Free Weights']",b'new-york-ny',b'https://www.mynewplace.com/apartment/pacific-newport-jersey-city-nj-3w7449065115'
+
+4185.0,"b'25 River Dr S, Jersey City, NJ 07310'",2,"[b'Concierge', b'Free Weights']",b'new-york-ny',b'https://www.mynewplace.com/apartment/pacific-newport-jersey-city-nj-3w7449065115'
+
+3073.0,"b'30 Newport Pkwy, Jersey City, NJ 07310'",1,"[b'Concierge', b'Free Weights']",b'new-york-ny',b'https://www.mynewplace.com/apartment/parkside-east-newport-jersey-city-nj-307249085176'
+
+3067.5,"b'40 Newport Pkwy, Jersey City, NJ 07310'",1,"[b'Concierge', b'Free Weights']",b'new-york-ny',b'https://www.mynewplace.com/apartment/parkside-west-newport-jersey-city-nj-607849055137'
+
+3445.0,"b'1 River Ct, Jersey City, NJ 07310'",1,"[b'Concierge', b'Free Weights']",b'new-york-ny',b'https://www.mynewplace.com/apartment/riverside-newport-jersey-city-nj-907449055168'
+
+2932.5,"b'180 10th St, Jersey City, NJ 07302'",1,"[b'Concierge', b'Free Weights']",b'new-york-ny',b'https://www.mynewplace.com/apartment/roosevelt-hamilton-park-jersey-city-nj-407549065179'
+
+3247.5,"b'55 River Dr S, Jersey City, NJ 07310'",1,"[b'Concierge', b'Free Weights']",b'new-york-ny',b'https://www.mynewplace.com/apartment/waterside-square-north-newport-jersey-city-nj-307149075281'
+
+3272.5,"b'35 River Dr S, Jersey City, NJ 07310'",1,"[b'Concierge', b'Free Weights']",b'new-york-ny',b'https://www.mynewplace.com/apartment/waterside-square-south-newport-jersey-city-nj-007249065272'
+
+4980.0,"b'120 York St, Jersey City, NJ 07302'",1,"[b'Child Care', b""9' Ceilings"", b'ApartmentRatings 2019 Top Rated', b'Chef Inspired Kitchens', b'Custom Espresso Cabinetry', b'Green Conscious Design', b'Kitchenette', b'Landscaped Terrace', b'Luxury Baths']",b'new-york-ny',b'https://www.mynewplace.com/apartment/warren-at-york-by-windsor-jersey-city-nj-107149564094'
+
+4460.0,"b'1 Independence Ct, Hoboken, NJ 07030'",3,[b'View'],b'new-york-ny',b'https://www.mynewplace.com/apartment/the-north-independence-at-the-shipyard-hoboken-nj-707549565782'
+
+1995,"b'340 Orient Way, Lyndhurst, NJ 07071'",1,"[b'Transportation', b'Ample Closet Space', b'Climate-Controlled Storage Units', b'Cyber Cafe', b'Designer Kitchen Cabinets and Vanities', b'Expansive Windows', b'Light Capturing Bay Windows*']",b'new-york-ny',b'https://www.mynewplace.com/apartment/vermella-lyndhurst-lyndhurst-nj-407149646537'
+
+4565.0,"b'340 Orient Way, Lyndhurst, NJ 07071'",2,"[b'Transportation', b'Ample Closet Space', b'Climate-Controlled Storage Units', b'Cyber Cafe', b'Designer Kitchen Cabinets and Vanities', b'Expansive Windows', b'Light Capturing Bay Windows*']",b'new-york-ny',b'https://www.mynewplace.com/apartment/vermella-lyndhurst-lyndhurst-nj-407149646537'
+
+3343.5,"b'485 Marin Blvd, Jersey City, NJ 07302'",1,"[b'Concierge', b'Transportation', b'Free Weights', b'Recycling', b'Media Room']",b'new-york-ny',b'https://www.mynewplace.com/apartment/485-marin-jersey-city-nj-307149669136'
+
+2361.5,"b'23 University Place Blvd, Jersey City, NJ 07305'",1,"[b'Concierge', b'Transportation']",b'new-york-ny',b'https://www.mynewplace.com/apartment/rivet-jersey-city-nj-3x7249649996'
+
+3650.0,"b'90 Christopher Columbus Dr, Jersey City, NJ 07302'",1,"[b'Concierge', b'24-Hour Availability', b'BBQ/Picnic Area']",b'new-york-ny',b'https://www.mynewplace.com/apartment/90-columbus-jersey-city-nj-6s7165262315'
+
+3150.0,"b'232 Pavonia Ave, Jersey City, NJ 07302'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/hamilton-square-jersey-city-nj-207165218838'
+
+1850.0,"b'2534 Adam Clayton Powell Junior Boulevard, New York, NY 10039'",3,"[b'Two and Three Bedroom Floor Plans', b'Fully Equipped Kitchens with Dishwashers', b'Open Kitchens with breakfast bars', b'Large Floor Plans', b'Ceramic Tile Showers']",b'new-york-ny',b'https://www.mynewplace.com/apartment/shore-view-apartments-new-york-ny-2v7969713571'
+
+4705.0,"b'198 Van Vorst St, Jersey City, NJ 07302'",1,"[b'Concierge', b'24-Hour Availability']",b'new-york-ny',b'https://www.mynewplace.com/apartment/madox-jersey-city-nj-3b7670510389'
+
+2100,"b'5601 Kennedy Blvd E, West New York, NJ 07093'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/overlook-terrace-south-west-new-york-nj-207074549418'
+
+2700.0,"b'5601 Kennedy Blvd E, West New York, NJ 07093'",2,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/overlook-terrace-south-west-new-york-nj-207074549418'
+
+3505.0,"b'200 Greene St, Jersey City, NJ 07302'",1,[b'Concierge'],b'new-york-ny',b'https://www.mynewplace.com/apartment/jersey-city-urby-jersey-city-nj-2n7374622273'
+
+2494,"b'7912 River Road, North Bergen, NJ 07047'",1,"[b'Granite Countertops', b'Individual Climate Control', b'Hardwood Flooring in Entryway, Kitchen, Living, & Dining Room', b'Private Balconies', b'Breakfast Bars', b'Washer & Dryer']",b'new-york-ny',b'https://www.mynewplace.com/apartment/half-moon-harbour-north-bergen-nj-307075648917'
+
+4007.0,"b'7912 River Road, North Bergen, NJ 07047'",2,"[b'Granite Countertops', b'Individual Climate Control', b'Hardwood Flooring in Entryway, Kitchen, Living, & Dining Room', b'Private Balconies', b'Breakfast Bars', b'Washer & Dryer']",b'new-york-ny',b'https://www.mynewplace.com/apartment/half-moon-harbour-north-bergen-nj-307075648917'
+
+5520.0,"b'7912 River Road, North Bergen, NJ 07047'",3,"[b'Granite Countertops', b'Individual Climate Control', b'Hardwood Flooring in Entryway, Kitchen, Living, & Dining Room', b'Private Balconies', b'Breakfast Bars', b'Washer & Dryer']",b'new-york-ny',b'https://www.mynewplace.com/apartment/half-moon-harbour-north-bergen-nj-307075648917'
+
+0,"b'E 77 St, New York, NY 10075'",2,"[b'Pool', b'Fitness Center', b'Tennis Court', b'Air Conditioning', b'Fireplace', b'Pets Allowed', b'Washer/Dryer in Unit', b'Balcony']",b'new-york-ny',b'https://www.mynewplace.com/apartment/e-77-st-new-york-new-york-ny-8f7179535018'
+
+4525.5,"b'2130 Adam Clayton Powell Blvd, New York, NY 10027'",1,"[b'Washer & Dryer', b'Spacious Closets', b'Two Tone Cabinetry', b'Granite Countertops', b'Glass Mosaic Backsplash']",b'new-york-ny',b'https://www.mynewplace.com/apartment/2130-adam-clayton-powell-blvd-new-york-ny-007679613111'
+
+5000.0,"b'273 16th St, Jersey City, NJ 07310'",1,"[b'Transportation', b'24-Hour Availability', b'Media Room', b""10' High Ceilings"", b""8' Red Oak Entrance Doors"", b'Black Galaxy Granite Countertops', b'Engineered European White Oak Flooring', b'Expansive Play Area', b'Exposed Spiral Duct Work', b'Fireside Seating with Outdoor TV', b'Gas Grills with Prep Stations']",b'new-york-ny',b'https://www.mynewplace.com/apartment/soho-lofts-jersey-city-nj-307581045770'
+
+2798.0,"b'1040 John F Kennedy Blvd, Bayonne, NJ 07002'",1,"[b'Free Weights', b'Den Layouts Available in Select Homes', b'Efficient Appliances', b'Floor-to-Ceiling Windows', b'Hudson Bike Share (Across the Street)']",b'new-york-ny',b'https://www.mynewplace.com/apartment/park-bayonne-bayonne-nj-107182077194'
+
+1730,"b'190 W 54th St, Bayonne, NJ 07002'",1,"[b'Spa', b'Concierge', b'Transportation', b'BBQ/Picnic Area', b'Dry cleaning services', b'Efficient Appliances', b'Electric vehicle charging stations']",b'new-york-ny',b'https://www.mynewplace.com/apartment/woodmont-bay-club-bayonne-nj-2i7682037291'
+
+2962.5,"b'190 W 54th St, Bayonne, NJ 07002'",2,"[b'Spa', b'Concierge', b'Transportation', b'BBQ/Picnic Area', b'Dry cleaning services', b'Efficient Appliances', b'Electric vehicle charging stations']",b'new-york-ny',b'https://www.mynewplace.com/apartment/woodmont-bay-club-bayonne-nj-2i7682037291'
+
+4195.0,"b'190 W 54th St, Bayonne, NJ 07002'",3,"[b'Spa', b'Concierge', b'Transportation', b'BBQ/Picnic Area', b'Dry cleaning services', b'Efficient Appliances', b'Electric vehicle charging stations']",b'new-york-ny',b'https://www.mynewplace.com/apartment/woodmont-bay-club-bayonne-nj-2i7682037291'
+
+4795.0,"b'675 Monmouth St, Jersey City, NJ 07306'",1,"[b'Concierge', b'42 Inch Grey Cabinetry', b'Arcade', b'Ceramic Tile Kitchen Backsplash', b'Coffee Bar', b'Communal Dining', b'Complimentary Window Treatments', b'Complimentary Wine Rack in Kitchen', b'Custom Ceramic Bathroom Tiles', b'Firepits', b'Frigidaire Stainless Steel Appliances', b'Key Fob Entry']",b'new-york-ny',b'https://www.mynewplace.com/apartment/the-enclave-jersey-city-nj-007784135922'
+
+5644.0,"b'321 Warren Street, Jersey City, NJ 07302'",1,"[b'Range', b'Disposal', b'Microwave', b'Dishwasher', b'Refrigerator', b'Air Conditioner']",b'new-york-ny',b'https://www.mynewplace.com/apartment/the-lively-jersey-city-nj-607885765761'
+
+3537.0,"b'235 Grand St, Jersey City, NJ 07302'",1,"[b'Transportation', b'Media Room', b'Group Exercise', b'24 HR Attended Lobby', b'Bianco Quartz Kitchen Countertops', b'Co-Working Space', b'Grey Herrinbone Mosaic Backsplash', b'Kohler Bathroom Fixtures']",b'new-york-ny',b'https://www.mynewplace.com/apartment/235-grand-jersey-city-nj-5y7388075213'
+
+2399,"b'1 Main St, Edgewater, NJ 07020'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/the-view-edgewater-nj-5c7488953633'
+
+3195.0,"b'1 Main St, Edgewater, NJ 07020'",2,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/the-view-edgewater-nj-5c7488953633'
+
+8790.0,"b'435 West 31st Street, New York, NY 10001'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/the-eugene-new-york-ny-1x7494131476'
+
+7795.0,"b'1 Blue Slip, Brooklyn, NY 11222'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/one-blue-slip-brooklyn-ny-4n7694151417'
+
+5915.0,"b'80 Dekalb Avenue, Brooklyn, NY 11201'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/dklb-bkln-brooklyn-ny-1i7494111532'
+
+1000.0,"b'123 Street, New York, NY 10005'",7,"[b'Pool', b'Fitness Center', b'Tennis Court', b'Air Conditioning', b'Penthouse', b'Assigned Outdoor Parking', b'Fireplace', b'Views']",b'new-york-ny',b'https://www.mynewplace.com/apartment/123-street-new-york-new-york-ny-1b8103936023'
+
+2400.0,"b'135 E 57th St Ste 17-106, New York, NY 10022'",2,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/135-e-57th-st-ste-17-106-new-york-new-york-ny-2m8707175479'
+
+5022.0,"b'65 West 96 Street, New York, NY 10025'",2,"[b'Range', b'Balcony']",b'new-york-ny',b'https://www.mynewplace.com/apartment/tower-west-new-york-ny-4j8411497554'
+
+4936.0,"b'25 Park Ln, Jersey City, NJ 07310'",1,"[b'Concierge', b'Free Weights']",b'new-york-ny',b'https://www.mynewplace.com/apartment/ellipse-jersey-city-nj-5n8014265032'
+
+3300.0,"b'1213 Washington St, Hoboken, NJ 07030'",3,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/washington-estates-hoboken-nj-4h8514331649'
+
+4658.0,"b'33 Hudson St, Jersey City, NJ 07302'",1,"[b'Concierge', b'Elegant baths with ceramic tiling', b'First-floor shopping and dining', b'On-Site Retail', b'Pet-friendly community', b""Play: Engaging kids' club""]",b'new-york-ny',b'https://www.mynewplace.com/apartment/liberty-towers-jersey-city-nj-6e8214355749'
+
+2450.0,"b'65 Maple St, Jersey City, NJ 07304'",1,"[b'75 Kw rooftop solar installation', b'Electric car charging stations', b'Fleet of deluxe commuter bicycles', b'Onsite gourmet grocery and deli', b'Onsite parking', b'Pet grooming services']",b'new-york-ny',b'https://www.mynewplace.com/apartment/solaris-lofts-jersey-city-nj-2w8014631321'
+
+2682.5,"b'295 Johnston Ave, Jersey City, NJ 07304'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/295j-jersey-city-nj-308714788288'
+
+1950,"b'33 University Place Blvd, Jersey City, NJ 07305'",1,"[b'Concierge', b'BBQ/Picnic Area']",b'new-york-ny',b'https://www.mynewplace.com/apartment/city-line-west-jersey-city-nj-7a8216170744'
+
+3000.0,"b'33 University Place Blvd, Jersey City, NJ 07305'",2,"[b'Concierge', b'BBQ/Picnic Area']",b'new-york-ny',b'https://www.mynewplace.com/apartment/city-line-west-jersey-city-nj-7a8216170744'
+
+7225.0,"b'315 W 33rd St, New York, NY 10001'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/the-olivia-new-york-ny-9h8816857831'
+
+2677.0,"b'1305 Paterson Plank Rd, North Bergen, NJ 07047'",1,"[b'Playroom', b'Outdoor Swimming Pool', b'State of the Art Fitness Center']",b'new-york-ny',b'https://www.mynewplace.com/apartment/hudson-mews-north-bergen-nj-608417888981'
+
+3101.5,"b'97 Newkirk St, Jersey City, NJ 07306'",1,"[b'Exercise Facility -', b'high speed wi-fi']",b'new-york-ny',b'https://www.mynewplace.com/apartment/cmpnd-jersey-city-nj-708318083652'
+
+4875.0,"b'425 Washington Blvd, Jersey City, NJ 07310'",1,"[b'Concierge', b'Chic clubrooms', b'greenscape with outdoor seating', b'Floor-to-ceiling windows', b'Karaoke room', b'On-site program director', b'On-site retail']",b'new-york-ny',b'https://www.mynewplace.com/apartment/the-blvd-collection-jersey-city-nj-208318419083'
+
+2850.0,"b'753 East 6th Street, New York, NY 10009'",2,[b'Dishwasher'],b'new-york-ny',b'https://www.mynewplace.com/apartment/2850-2-bedroom-in-753-east-6th-street-new-york-ny-2q8325159057'
+
+1875.0,"b'125 37th Street, Union City, NJ 07087'",1,[b'Air Conditioning'],b'new-york-ny',b'https://www.mynewplace.com/apartment/1875-1-bedroom-in-125-37th-street-union-city-nj-608133648144'
+
+2200.0,"b'107 Claremont Avenue, Jersey City, NJ 07305'",4,[b'Assigned Parking'],b'new-york-ny',b'https://www.mynewplace.com/apartment/2200-4-bedroom-in-107-claremont-avenue-jersey-city-nj-8k8135919172'
+
+2100.0,"b'284 3rd Street, Jersey City, NJ 07302'",2,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/2100-2-bedroom-in-284-3rd-street-jersey-city-nj-1n8741457248'
+
+2080.0,"b'110 hoboken ave, Jersey City, NJ 07310'",1,[b'Air Conditioning'],b'new-york-ny',b'https://www.mynewplace.com/apartment/2080-1-bedroom-in-110-hoboken-ave-jersey-city-nj-108244961327'
+
+1650.0,"b'8650 Boulevard East, North Bergen, NJ 07047'",1,"[b'Building: Controlled Access', b'Building: Swimming Pool', b'Building: Elevator']",b'new-york-ny',b'https://www.mynewplace.com/apartment/1650-1-bedroom-in-8650-boulevard-east-north-bergen-nj-508548078530'
+
+1395.0,"b'4623 Broadway, Union City, NJ 07087'",1,[b'Hardwood Floor'],b'new-york-ny',b'https://www.mynewplace.com/apartment/1395-1-bedroom-in-4623-broadway-union-city-nj-508351067287'
+
+1916,"b'277 Bergen Ave, Jersey City, NJ 07305'",1,"[b'Laundry Rooms', b'On-site Management', b'24 Hour Security Surveillance', b'Security Officers On-Site']",b'new-york-ny',b'https://www.mynewplace.com/apartment/bergen-manor-jersey-city-nj-408351817224'
+
+2546.0,"b'277 Bergen Ave, Jersey City, NJ 07305'",2,"[b'Laundry Rooms', b'On-site Management', b'24 Hour Security Surveillance', b'Security Officers On-Site']",b'new-york-ny',b'https://www.mynewplace.com/apartment/bergen-manor-jersey-city-nj-408351817224'
+
+3176.0,"b'277 Bergen Ave, Jersey City, NJ 07305'",3,"[b'Laundry Rooms', b'On-site Management', b'24 Hour Security Surveillance', b'Security Officers On-Site']",b'new-york-ny',b'https://www.mynewplace.com/apartment/bergen-manor-jersey-city-nj-408351817224'
+
+2600.0,"b'85 Van Wagenen Ave, Jersey City, NJ 07306'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/van-wagenen-i-jersey-city-nj-508051877246'
+
+1864,"b'2348 John F. Kennedy Boulevard, Jersey City, NJ 07304'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/kennedy-manor-jersey-city-nj-108351857217'
+
+2468.0,"b'2348 John F. Kennedy Boulevard, Jersey City, NJ 07304'",2,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/kennedy-manor-jersey-city-nj-108351857217'
+
+1395.0,"b'2106 John F. Kennedy Boulevard, Union City, NJ 07087'",1,[b'Hardwood Floor'],b'new-york-ny',b'https://www.mynewplace.com/apartment/1395-1-bedroom-in-2106-john-f-kennedy-boulevard-union-city-nj-0n8856614111'
+
+2284.0,"b'25 Park View Avenue, Jersey City, NJ 07302'",1,[b'Air Conditioning'],b'new-york-ny',b'https://www.mynewplace.com/apartment/2284-1-bedroom-in-25-park-view-avenue-jersey-city-nj-308356697745'
+
+2400.0,"b'80 Wayne Street, Jersey City, NJ 07302'",2,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/2400-2-bedroom-in-80-wayne-street-jersey-city-nj-5y8358085941'
+
+2000.0,"b'328 West 101st Street, New York, NY 10025'",1,[b'Fireplace'],b'new-york-ny',b'https://www.mynewplace.com/apartment/2000-1-bedroom-in-328-west-101st-street-new-york-ny-4k8858327066'
+
+1500.0,"b'312 Chapel Avenue, Jersey City, NJ 07305'",2,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/1500-2-bedroom-in-312-chapel-avenue-jersey-city-nj-408158397648'
+
+2350.0,"b'132 Mercer Street, Jersey City, NJ 07302'",1,[b'Dishwasher'],b'new-york-ny',b'https://www.mynewplace.com/apartment/2350-1-bedroom-in-132-mercer-street-jersey-city-nj-208559930928'
+
+2357.0,"b'360 East 65th Street, New York, NY 10065'",1,"[b'Building: Controlled Access', b'Building: Elevator', b'Building: Garage Parking']",b'new-york-ny',b'https://www.mynewplace.com/apartment/2357-1-bedroom-in-360-east-65th-street-new-york-ny-1k8662030419'
+
+1550.0,"b'75 Palisade Avenue, Jersey City, NJ 07306'",1,[b'Air Conditioning'],b'new-york-ny',b'https://www.mynewplace.com/apartment/1550-1-bedroom-in-75-palisade-avenue-jersey-city-nj-2h8662543246'
+
+2000.0,"b'6725 John F. Kennedy Boulevard, North Bergen, NJ 07047'",1,[b'Air Conditioning'],b'new-york-ny',b'https://www.mynewplace.com/apartment/2000-1-bedroom-in-6725-john-f-kennedy-boulevard-north-bergen-nj-8e8162504800'
+
+1850.0,"b'6113 Fillmore Place, West New York, NJ 07093'",1,"[b'Fireplace', b'Air Conditioning']",b'new-york-ny',b'https://www.mynewplace.com/apartment/1850-1-bedroom-in-6113-fillmore-place-west-new-york-nj-608962639533'
+
+1675.0,"b'64 Baldwin Avenue, Jersey City, NJ 07306'",2,[b'Hardwood Floor'],b'new-york-ny',b'https://www.mynewplace.com/apartment/1675-2-bedroom-in-64-baldwin-avenue-jersey-city-nj-208263982452'
+
+2425.0,"b'6727 John F. Kennedy Boulevard, North Bergen, NJ 07047'",2,[b'Air Conditioning'],b'new-york-ny',b'https://www.mynewplace.com/apartment/2425-2-bedroom-in-6727-john-f-kennedy-boulevard-north-bergen-nj-908564605158'
+
+2400.0,"b'270 Marin Boulevard, Jersey City, NJ 07302'",2,[b'Air Conditioning'],b'new-york-ny',b'https://www.mynewplace.com/apartment/2400-2-bedroom-in-270-marin-boulevard-jersey-city-nj-608466028059'
+
+2500.0,"b'350 West 50th Street, New York, NY 10019'",1,[b'Air Conditioning'],b'new-york-ny',b'https://www.mynewplace.com/apartment/2500-1-bedroom-in-350-west-50th-street-new-york-ny-808066360365'
+
+2400.0,"b'7430 Boulevard East, North Bergen, NJ 07047'",2,[b'Air Conditioning'],b'new-york-ny',b'https://www.mynewplace.com/apartment/2400-2-bedroom-in-7430-boulevard-east-north-bergen-nj-1p8166423923'
+
+2645.0,"b'17 Battery Place, New York, NY 10004'",1,[b'Air Conditioning'],b'new-york-ny',b'https://www.mynewplace.com/apartment/2645-1-bedroom-in-17-battery-place-new-york-ny-508867143339'
+
+1675.0,"b'409 Ocean Avenue, Jersey City, NJ 07305'",2,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/1675-2-bedroom-in-409-ocean-avenue-jersey-city-nj-408567345815'
+
+1550.0,"b'455 Fairview Avenue, Fairview, NJ 07022'",1,[b'Air Conditioning'],b'new-york-ny',b'https://www.mynewplace.com/apartment/1550-1-bedroom-in-455-fairview-avenue-fairview-nj-8r8768036917'
+
+1775.0,"b'42 Condict Street, Jersey City, NJ 07306'",2,[b'Air Conditioning'],b'new-york-ny',b'https://www.mynewplace.com/apartment/1775-2-bedroom-in-42-condict-street-jersey-city-nj-308768358973'
+
+1595.0,"b'1614 Summit Avenue, Union City, NJ 07087'",2,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/1595-2-bedroom-in-1614-summit-avenue-union-city-nj-408069436035'
+
+1500.0,"b'413 Ocean Avenue, Jersey City, NJ 07305'",1,[b'Building: Controlled Access'],b'new-york-ny',b'https://www.mynewplace.com/apartment/1500-1-bedroom-in-413-ocean-avenue-jersey-city-nj-408369665521'
+
+1499.0,"b'81 Ocean Avenue, Jersey City, NJ 07305'",2,[b'Hardwood Floor'],b'new-york-ny',b'https://www.mynewplace.com/apartment/1499-2-bedroom-in-81-ocean-avenue-jersey-city-nj-708169768721'
+
+3200.0,"b'150 West 51st Street, New York, NY 10019'",1,"[b'On Site Laundry', b'Building: On Site Laundry', b'Building: Package Service', b'Building: Fitness Center', b'Building: Elevator']",b'new-york-ny',b'https://www.mynewplace.com/apartment/3200-1-bedroom-in-150-west-51st-street-new-york-ny-808570481860'
+
+4200.0,"b'353 1st Avenue, New York, NY 10010'",3,"[b'On Site Laundry', b'Building: Controlled Access', b'Building: Storage', b'Building: Package Service', b'Building: Elevator']",b'new-york-ny',b'https://www.mynewplace.com/apartment/4200-3-bedroom-in-353-1st-avenue-new-york-ny-908970848019'
+
+1595.0,"b'6700 Park Avenue, West New York, NJ 07093'",1,[b'On Site Laundry'],b'new-york-ny',b'https://www.mynewplace.com/apartment/1595-1-bedroom-in-6700-park-avenue-west-new-york-nj-1n8870828112'
+
+2200.0,"b'128 Coles Street, Jersey City, NJ 07302'",2,[b'Air Conditioning'],b'new-york-ny',b'https://www.mynewplace.com/apartment/2200-2-bedroom-in-128-coles-street-jersey-city-nj-308271049632'
+
+2350.0,"b'18 Bright Street, Jersey City, NJ 07302'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/2350-1-bedroom-in-18-bright-street-jersey-city-nj-8g8971291167'
+
+2799.0,"b'101 West 104th Street, New York, NY 10025'",2,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/2799-2-bedroom-in-101-west-104th-street-new-york-ny-308271251443'
+
+3795.0,"b'463 West 43rd Street, New York, NY 10036'",3,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/3795-3-bedroom-in-463-west-43rd-street-new-york-ny-608471421882'
+
+2150.0,"b'153 East 115th Street, New York, NY 10029'",2,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/2150-2-bedroom-in-153-east-115th-street-new-york-ny-608271510587'
+
+1450.0,"b'131 64th Street, West New York, NJ 07093'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/1450-1-bedroom-in-131-64th-street-west-new-york-nj-1f8271619138'
+
+2379.0,"b'315 East 84th Street, New York, NY 10028'",2,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/2379-2-bedroom-in-315-east-84th-street-new-york-ny-2t8771727961'
+
+2979.0,"b'53 East 95th Street, New York, NY 10128'",3,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/2979-3-bedroom-in-53-east-95th-street-new-york-ny-4f8371798034'
+
+1400.0,"b'18 74th Street, North Bergen, NJ 07047'",1,"[b'On Site Laundry', b'Building: Controlled Access']",b'new-york-ny',b'https://www.mynewplace.com/apartment/1400-1-bedroom-in-18-74th-street-north-bergen-nj-208771886657'
+
+1975.0,"b'575 57th Street, West New York, NJ 07093'",1,"[b'Fireplace', b'Air Conditioning']",b'new-york-ny',b'https://www.mynewplace.com/apartment/1975-1-bedroom-in-575-57th-street-west-new-york-nj-3i8471973430'
+
+4212.0,"b'520 West 36th Street, New York, NY 10018'",1,"[b'On Site Laundry', b'Building: Concierge Service', b'Building: Outdoor Space', b'Building: Door Person', b'Building: Storage', b'Building: Package Service', b'Building: Dry Cleaning Service', b'Building: Garage Parking']",b'new-york-ny',b'https://www.mynewplace.com/apartment/4212-1-bedroom-in-520-west-36th-street-new-york-ny-5f8472088924'
+
+2782.5,"b'1040 John F Kennedy Boulevard, Bayonne, NJ 07002'",1,"[b'Dishwasher', b'Quartz Countertops', b'Private Patio *select homes only', b'Central AC & Heat', b'Pre-wired Cable', b'Full-Size W&D']",b'new-york-ny',b'https://www.mynewplace.com/apartment/park-bayonne-bayonne-nj-4z8672279584'
+
+1600.0,"b'582 Saint Nicholas Avenue, New York, NY 10030'",1,"[b'On Site Laundry', b'Building: Controlled Access']",b'new-york-ny',b'https://www.mynewplace.com/apartment/1600-1-bedroom-in-582-saint-nicholas-avenue-new-york-ny-6u8772341131'
+
+2857.0,"b'216 East 89th Street, New York, NY 10128'",2,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/2857-2-bedroom-in-216-east-89th-street-new-york-ny-1t8172365713'
+
+2750.0,"b'931 Willow Avenue, Hoboken, NJ 07030'",2,"[b'Hardwood Floor', b'On Site Laundry']",b'new-york-ny',b'https://www.mynewplace.com/apartment/2750-2-bedroom-in-931-willow-avenue-hoboken-nj-208272571657'
+
+2100.0,"b'4 Beacon Way, Jersey City, NJ 07304'",1,"[b'Building: Concierge Service', b'Building: Swimming Pool', b'Building: Package Service']",b'new-york-ny',b'https://www.mynewplace.com/apartment/2100-1-bedroom-in-4-beacon-way-jersey-city-nj-208172527192'
+
+1895.0,"b'234 54th Street, West New York, NJ 07093'",1,[b'Building: Controlled Access'],b'new-york-ny',b'https://www.mynewplace.com/apartment/1895-1-bedroom-in-234-54th-street-west-new-york-nj-808472568765'
+
+1450.0,"b'304 50th Street, West New York, NJ 07093'",1,[b'Building: Storage'],b'new-york-ny',b'https://www.mynewplace.com/apartment/1450-1-bedroom-in-304-50th-street-west-new-york-nj-6p8772651164'
+
+2295.0,"b'6000 Palisade Avenue, West New York, NJ 07093'",3,[b'On Site Laundry'],b'new-york-ny',b'https://www.mynewplace.com/apartment/2295-3-bedroom-in-6000-palisade-avenue-west-new-york-nj-308872641578'
+
+1475.0,"b'5311 Palisade Avenue, West New York, NJ 07093'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/1475-1-bedroom-in-5311-palisade-avenue-west-new-york-nj-408272671648'
+
+2050.0,"b'355 Meadowlands Plaza, East Rutherford, NJ 07073'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/2050-1-bedroom-in-355-meadowlands-plaza-east-rutherford-nj-408272770132'
+
+2350.0,"b'880 Harbor Boulevard, Weehawken, NJ 07086'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/2350-1-bedroom-in-880-harbor-boulevard-weehawken-nj-6f8372740176'
+
+2650.0,"b'110 Pearl Street, New York, NY 10005'",1,[b'Building: Storage'],b'new-york-ny',b'https://www.mynewplace.com/apartment/2650-1-bedroom-in-110-pearl-street-new-york-ny-7f8372740812'
+
+1500.0,"b'692 Bergen Avenue, Jersey City, NJ 07304'",3,[b'On Site Laundry'],b'new-york-ny',b'https://www.mynewplace.com/apartment/1500-3-bedroom-in-692-bergen-avenue-jersey-city-nj-808072725087'
+
+2097.0,"b'21 Jewett Avenue, Jersey City, NJ 07304'",3,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/2097-3-bedroom-in-21-jewett-avenue-jersey-city-nj-908472715230'
+
+2350.0,"b'1410 Harbor Boulevard, Weehawken, NJ 07086'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/2350-1-bedroom-in-1410-harbor-boulevard-weehawken-nj-3y8872795484'
+
+1622.0,"b'943 Pavonia Avenue, Jersey City, NJ 07306'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/1622-1-bedroom-in-943-pavonia-avenue-jersey-city-nj-808172755689'
+
+1494.0,"b'38 Broadway, Jersey City, NJ 07306'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/1494-1-bedroom-in-38-broadway-jersey-city-nj-308872775814'
+
+1492.0,"b'169 Manhattan Avenue, Jersey City, NJ 07307'",1,[b'On Site Laundry'],b'new-york-ny',b'https://www.mynewplace.com/apartment/1492-1-bedroom-in-169-manhattan-avenue-jersey-city-nj-408772745983'
+
+1447.0,"b'67 Stuyvesant Avenue, Jersey City, NJ 07306'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/1447-1-bedroom-in-67-stuyvesant-avenue-jersey-city-nj-9c8072746033'
+
+1322.0,"b'18 Wright Avenue, Jersey City, NJ 07306'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/1322-1-bedroom-in-18-wright-avenue-jersey-city-nj-608172766282'
+
+1847.0,"b'173 Brunswick Street, Jersey City, NJ 07302'",2,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/1847-2-bedroom-in-173-brunswick-street-jersey-city-nj-408473077114'
+
+1772.0,"b'16 Reed Street, Jersey City, NJ 07304'",2,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/1772-2-bedroom-in-16-reed-street-jersey-city-nj-8g8673088802'
+
+1424.0,"b'42 Broadway, Jersey City, NJ 07306'",1,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/1424-1-bedroom-in-42-broadway-jersey-city-nj-6w8873174077'
+
+2000.0,"b'203 Madison Street, Hoboken, NJ 07030'",1,[b'Air Conditioning'],b'new-york-ny',b'https://www.mynewplace.com/apartment/2000-1-bedroom-in-203-madison-street-hoboken-nj-008373210112'
+
+1395.0,"b'235 56th Street, West New York, NJ 07093'",1,[b'Building: Storage'],b'new-york-ny',b'https://www.mynewplace.com/apartment/1395-1-bedroom-in-235-56th-street-west-new-york-nj-0h8473281882'
+
+1499.0,"b'413 54th Street, West New York, NJ 07093'",1,[b'Dishwasher'],b'new-york-ny',b'https://www.mynewplace.com/apartment/1499-1-bedroom-in-413-54th-street-west-new-york-nj-408273213207'
+
+1392.0,"b'863 Pavonia Avenue, Jersey City, NJ 07306'",2,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/1392-2-bedroom-in-863-pavonia-avenue-jersey-city-nj-4b8473277249'
+
+2500.0,"b'234 6th Street, Jersey City, NJ 07302'",2,"[b'On Site Laundry', b'Building: On Site Laundry']",b'new-york-ny',b'https://www.mynewplace.com/apartment/2500-2-bedroom-in-234-6th-street-jersey-city-nj-808173228909'
+
+3000.0,"b'130 East 24th Street, New York, NY 10010'",1,"[b'Building: Controlled Access', b'Building: Storage']",b'new-york-ny',b'https://www.mynewplace.com/apartment/3000-1-bedroom-in-130-east-24th-street-new-york-ny-7x8473219170'
+
+2199.0,"b'32 Magnolia Avenue, Jersey City, NJ 07306'",2,[b'Building: Fitness Center'],b'new-york-ny',b'https://www.mynewplace.com/apartment/2199-2-bedroom-in-32-magnolia-avenue-jersey-city-nj-2s8273384160'
+
+2300.0,"b'150 Baxter Street, New York, NY 10013'",2,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/2300-2-bedroom-in-150-baxter-street-new-york-ny-5u8973314625'
+
+1720.0,"b'1370 Paterson Plank Road, Secaucus, NJ 07094'",1,"[b'On Site Laundry', b'Building: Garage Parking']",b'new-york-ny',b'https://www.mynewplace.com/apartment/1720-1-bedroom-in-1370-paterson-plank-road-secaucus-nj-6r8773396687'
+
+1747.0,"b'69 Armstrong Avenue, Jersey City, NJ 07305'",3,[],b'new-york-ny',b'https://www.mynewplace.com/apartment/1747-3-bedroom-in-69-armstrong-avenue-jersey-city-nj-908773482569'
+
+2525.0,"b'6050 Boulevard East, West New York, NJ 07093'",1,"[b'On Site Laundry', b'Building: Concierge Service', b'Building: Swimming Pool', b'Building: Elevator', b'Building: Garage Parking']",b'new-york-ny',b'https://www.mynewplace.com/apartment/2525-1-bedroom-in-6050-boulevard-east-west-new-york-nj-508273423714'
+
+1400.0,"b'6015 Boulevard East, West New York, NJ 07093'",1,[b'Building: Storage'],b'new-york-ny',b'https://www.mynewplace.com/apartment/1400-1-bedroom-in-6015-boulevard-east-west-new-york-nj-3p8873425031'
+

@@ -1,11 +1,10 @@
-from utils.util_service import get_driver
+from utils.util_service import get_driver, encode_dictionary, convert_price_to_float
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 import time
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
-import re
 from selenium.webdriver.common.action_chains import ActionChains
 import csv
 import pandas as pd
@@ -16,7 +15,7 @@ def refresh_homes():
     urlPrefix = 'https://www.mynewplace.com'
     apartmentPrefix = '/apartments-for-rent/'
     cities = pd.read_csv('predefined_data/state_url_mapping.csv')['mynewhome']
-    for city in cities[:2]:
+    for city in cities:
         driver = get_driver()
         driver.get(urlPrefix)
         wait = WebDriverWait(driver, 3)
@@ -33,7 +32,7 @@ def refresh_homes():
         time.sleep(2)
         cityLink.click()
         time.sleep(3)
-        for i in range(1, 4):
+        for i in range(1, 2):
             filter = wait.until(EC.visibility_of_element_located((By.XPATH, "//a[contains(@onclick, 'toggleFilter()')]")))
             filter.click()
             select = wait.until(EC.visibility_of_element_located((By.XPATH, "//select[contains(@id, 'beds')]")))
@@ -55,17 +54,18 @@ def refresh_homes():
         driver.quit()
     for element in urls_list:
         house_options.extend(url2Dic(element['url'], element['city']))
-    csv_columns = ['Price', 'Address', 'Address', 'NumOfBed', 'Amenities', 'City', 'Url']
+    csv_columns = ['Price', 'Address', 'NumOfBed', 'Amenities', 'City', 'Url']
     with open('downloaded_data/mynewhome_data', 'w') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
         writer.writeheader()
         for data in house_options:
             price = data['Price']
-            if type(price) == str and '$' in price:
-                price = price.replace('$', '')
-                price = price.replace(',','')
-                data['Price'] = float(price)
-            writer.writerow(data)
+            # if price not mentioned, put it as 0
+            if price == 'Please Call':
+                data['Price'] = 0
+            elif type(price) == str:
+                data['Price'] = convert_price_to_float(price)
+            writer.writerow(encode_dictionary(data))
         csvfile.truncate()   
         
 
@@ -80,6 +80,7 @@ a dictionary of the house information, including Price, Address, Amenities
 """
     
 def url2Dic(url, city):
+    print(url)
     info_list = ['Price', 'Address','NumOfBed','Amenities']
     
     option1_info = {'City': city, 'Url': url}
@@ -106,9 +107,8 @@ def url2Dic(url, city):
     minPrice = ''
     if '-' in price:
         price_range = price.split('-')
-        # print(type(bed_option[0]))
-        minPrice = price_range[0].strip()
-        maxPrice = price_range[1].strip()
+        minPrice = convert_price_to_float(price_range[0].strip())
+        maxPrice = convert_price_to_float(price_range[1].strip())
 
     """Find the number of Bedroom, or a range of number for bedroom"""
     bed_bath_Tag = bsyc1.findAll('h5',{"class":"bed-bath"})[0]
@@ -125,7 +125,6 @@ def url2Dic(url, city):
 
     if '-' in bed_range:
         bed_option_str = bed_bath[0].split('-')
-        # print(type(bed_option[0]))
         bed_option = []
         for i in bed_option_str:
             bed_option.append(int(i.strip()))
@@ -160,7 +159,6 @@ def url2Dic(url, city):
     house_options = []
     
     if '-' not in price and '-' not in bed_range:
-        # print("check")
         option1_info['Price']  = price
         option1_info['Address'] = address
         option1_info['NumOfBed'] = noOfBed
@@ -168,7 +166,6 @@ def url2Dic(url, city):
         house_options.append(option1_info)
     
     elif '-' in price and '-' not in bed_range:
-        # print("check")
         avg_price = (int(maxPrice)+int(minPrice))/2
         option1_info['Price']  = avg_price
         option1_info['Address'] = address
@@ -203,8 +200,8 @@ def url2Dic(url, city):
 
 
         elif minPrice != maxPrice and minBed != maxBed:
-            int_maxPrice = int(re.sub('[^0-9]+', '', maxPrice))
-            int_minPrice = int(re.sub('[^0-9]+', '', minPrice))
+            int_maxPrice = int(maxPrice)
+            int_minPrice = int(minPrice)
             price_range = int_maxPrice - int_minPrice
             bed_range = maxBed - minBed
             gap = price_range / bed_range

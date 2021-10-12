@@ -1,10 +1,9 @@
-import os
 import requests
 
 def download_file(url, filename):
     try:
         req = requests.get(url)
-        filename = '../downloaded_files/' + filename + '.xlsx'
+        filename = 'downloaded_files/' + filename + '.xlsx'
             
         with requests.get(url) as req:
             with open(filename, 'wb') as f:

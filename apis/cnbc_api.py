@@ -11,7 +11,7 @@ def get_news_data():
     for symbol in companies['Abbreviation']:
         news_items.extend(call_api(symbol))
     csv_columns = ['symbol', 'headline', 'description', 'published_date', 'url']
-    with open('../downloaded_data/cnbc_data', 'w') as csvfile:
+    with open('downloaded_data/cnbc_data', 'w') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
         writer.writeheader()
         for data in news_items:

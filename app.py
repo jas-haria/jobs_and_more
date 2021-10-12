@@ -1,7 +1,7 @@
 from apis.cnbc_api import get_news_data
 from download_scripts.tax_foundation_downloader import update_tax_data
 from scraping_scripts.careerbuilder_scraper import refresh_salaries
-from scraping_scripts.dice_scraper import refresh_jobs, test
+from scraping_scripts.dice_scraper import refresh_jobs
 from scraping_scripts.mynewhome_scraper import refresh_homes
 
 input_prompt = '''
@@ -12,12 +12,17 @@ input_prompt = '''
 
 
 def refresh_stats():
-    test()
+    print('Scraping jobs from dice.com ...')
     #refresh_jobs()
-    #refresh_salaries()
-    #refresh_homes()
-    #update_tax_data()
-    #get_news_data()
+    print('Scraping salaries from careerbuilder.com ...')
+    refresh_salaries()
+    print('Scraping house rentals from mynewhome.com ...')
+    refresh_homes()
+    print('Downloading tax data from taxfoundation.com ...')
+    update_tax_data()
+    print('Fetching financial news from cnbc api ...')
+    get_news_data()
+    print('All data successfully updated!')
 
 if __name__ == '__main__':
     while True:
