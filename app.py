@@ -3,12 +3,15 @@ from download_scripts.tax_foundation_downloader import update_tax_data
 from scraping_scripts.careerbuilder_scraper import refresh_salaries
 from scraping_scripts.dice_scraper import refresh_jobs
 from scraping_scripts.mynewhome_scraper import refresh_homes
-from processing_scripts.processing_script import get_total_salary
+from processing_scripts.processing_script import get_rental_options, get_company_news, get_total_salary
+import pandas as pd
+from tabulate import tabulate
 
 input_prompt = '''
-1 - Show jobs by city
-2 - Show jobs by company
-3 - Refresh data
+1 - Show top 20 new jobs
+2 - Show top company news
+3 - Show rental apartments
+4 - Refresh data
 '''
 
 refresh_confirmation_prompt = '''
@@ -40,21 +43,41 @@ def refresh_stats():
     print('Fetching financial news from cnbc api ...')
     get_news_data()
     print('All data successfully updated!')
+    
+def show_rental_apartments(beds):
+    cities = pd.read_csv('predefined_data/state_url_mapping.csv')
+    print("Enter the index for the city you want:")
+    for index, row in cities.iterrows():
+        print(index, row['City'])
+    val = int(input())
+    city = None
+    cityName = None
+    for index, row in cities.iterrows():
+        if val == index:
+            city = row['mynewhome']
+            cityName = row['City']
+    print(str(beds) + " bed apartments in " + cityName + ":")
+    for item in get_rental_options(city, beds):
+        print(item['Address'] + " (" + item['Url'] + ')')
+        print("Cost = $" + str(item['Price']))
+    
 
 if __name__ == '__main__':
-    '''status = input(starting_prompt)
+    status = input(starting_prompt)
     if status == 'y':
         married = True
     else:
         married = False
-    rooms = int(input(second_prompt))'''
+    beds = int(input(second_prompt))
     while True:
         val = input(input_prompt)
         if val == '1':
             get_total_salary()
         elif val == '2':
-            continue
+            get_company_news()
         elif val == '3':
+            show_rental_apartments(beds)
+        elif val == '4':
             val1 = input(refresh_confirmation_prompt)
             if val1 == 'y':
                 refresh_stats()

@@ -6,7 +6,7 @@ from config import config
 def get_driver():
     options = Options()
     options.add_argument("--headless")
-    path = r"C:/Users/jasha/DFP/jobs_and_more/chromedriver/chromedriver.exe"
+    path = "chromedriver/chromedriver.exe"
     driver = webdriver.Chrome(path, options=options)
     driver.maximize_window()
     return driver

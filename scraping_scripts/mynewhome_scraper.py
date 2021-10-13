@@ -83,7 +83,6 @@ a dictionary of the house information, including Price, Address, Amenities
 """
     
 def url2Dic(url, city):
-    print(url)
     info_list = ['Price', 'Address','NumOfBed','Amenities']
     
     option1_info = {'City': city, 'Url': url}
