@@ -1,8 +1,16 @@
+'''
+Jas Haria - jharia
+Vaibhav Gaur - vgaur
+Ryan Wang - zhenxi
+Victor Wang - hanmingw
+'''
+
 import pandas as pd
 from utils.util_service import decode_dictionary
 import regex as re
 from config import config
 
+# gets avg rent for a city
 def get_average_rent(city='new-york-ny', num_of_beds=2):
     my_new_place_data = pd.read_csv('downloaded_data/mynewhome_data')
     results_df = my_new_place_data[(my_new_place_data['City'] == str(city.encode(config['storage_encoding']))) 
@@ -10,6 +18,7 @@ def get_average_rent(city='new-york-ny', num_of_beds=2):
                                   & (my_new_place_data['Price'] > 0)]
     return results_df['Price'].mean()
 
+# gets all rental options for a city
 def get_rental_options(city, num_of_beds):
     my_new_place_data = pd.read_csv('downloaded_data/mynewhome_data')
     results_df = my_new_place_data[(my_new_place_data['City'] == str(city.encode(config['storage_encoding']))) 
@@ -20,7 +29,7 @@ def get_rental_options(city, num_of_beds):
         rental_options.append(option)
     return rental_options
 
-
+#calculates total effective salary
 def get_total_salary(married = False, num_of_beds = 1):
     job_data = pd.read_csv('downloaded_data/career_builder_data')
     state_url = pd.read_csv('predefined_data/state_url_mapping.csv')
@@ -106,6 +115,7 @@ def get_total_salary(married = False, num_of_beds = 1):
     
     print(job_data.head(20))
     
+# get company news
 def get_company_news():
     news = pd.read_csv('downloaded_data/cnbc_data')
     print(news)

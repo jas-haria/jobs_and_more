@@ -1,3 +1,10 @@
+'''
+Jas Haria - jharia
+Vaibhav Gaur - vgaur
+Ryan Wang - zhenxi
+Victor Wang - hanmingw
+'''
+
 from utils.util_service import get_driver, encode_dictionary, convert_price_to_float
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -9,6 +16,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 import csv
 import pandas as pd
 
+# this method gets all urls for houses for multiple cities
 def refresh_homes():
     urls_list = []
     house_options = []
@@ -72,10 +80,6 @@ def refresh_homes():
         csvfile.truncate()   
         
 
-"""
-getUrl method will take the Url for one single city as the parameter, and return
-a list of url which refers to all the houses page in that city.
-"""
 
 """
 url2Dic method will take the Url for one single house as the parameter, and return

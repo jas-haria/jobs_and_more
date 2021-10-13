@@ -1,3 +1,10 @@
+'''
+Jas Haria - jharia
+Vaibhav Gaur - vgaur
+Ryan Wang - zhenxi
+Victor Wang - hanmingw
+'''
+
 from utils.util_service import get_driver, encode_dictionary
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -8,6 +15,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import csv
 
+# function to refresh job data forom
 def refresh_jobs():
     cities = pd.read_csv('predefined_data/state_url_mapping.csv')['dice']
     companies = pd.read_csv('predefined_data/company_list.csv')['Companies']
@@ -41,6 +49,7 @@ def refresh_jobs():
             writer.writerow(encode_dictionary(data))
         csvfile.truncate()
 
+# function to get urls of new jobs from dice.com
 def get_job_urls(cities, companies):
     driver = get_driver()
     links = set()

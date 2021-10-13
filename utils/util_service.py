@@ -1,8 +1,15 @@
+'''
+Jas Haria - jharia
+Vaibhav Gaur - vgaur
+Ryan Wang - zhenxi
+Victor Wang - hanmingw
+'''
+
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from config import config
 
-
+# get selenium driver
 def get_driver():
     options = Options()
     options.add_argument("--headless")

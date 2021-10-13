@@ -1,3 +1,10 @@
+'''
+Jas Haria - jharia
+Vaibhav Gaur - vgaur
+Ryan Wang - zhenxi
+Victor Wang - hanmingw
+'''
+
 from apis.cnbc_api import get_news_data
 from download_scripts.tax_foundation_downloader import update_tax_data
 from scraping_scripts.careerbuilder_scraper import refresh_salaries
@@ -12,6 +19,7 @@ input_prompt = '''
 2 - Show top company news
 3 - Show rental apartments
 4 - Refresh data
+5 - Exit
 '''
 
 refresh_confirmation_prompt = '''

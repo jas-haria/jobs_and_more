@@ -1,9 +1,17 @@
+'''
+Jas Haria - jharia
+Vaibhav Gaur - vgaur
+Ryan Wang - zhenxi
+Victor Wang - hanmingw
+'''
+
 import requests
 from datetime import datetime
 import pandas as pd
 import csv
 from config import config
 
+#gets companies to call api on
 def get_news_data():
     # put key in config file
     companies = pd.read_csv('predefined_data/company_list.csv')
@@ -19,7 +27,7 @@ def get_news_data():
         csvfile.truncate()
         
     
-    
+  # calls cnbc api  
 def call_api(symbol):
     url = "https://cnbc.p.rapidapi.com/news/v2/list-by-symbol"
     querystring = {"symbol":symbol,"page":"1","pageSize":"5"}

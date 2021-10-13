@@ -1,3 +1,10 @@
+'''
+Jas Haria - jharia
+Vaibhav Gaur - vgaur
+Ryan Wang - zhenxi
+Victor Wang - hanmingw
+'''
+
 from bs4 import BeautifulSoup
 from utils.util_service import get_driver, encode_dictionary, decode_dictionary, convert_price_to_float
 from selenium.webdriver.support.ui import WebDriverWait
@@ -7,6 +14,7 @@ import time
 import pandas as pd
 import csv
 
+# function to refresh salaries for jobs from dice.com from careerbuilder.com
 def refresh_salaries():
     dice_data = pd.read_csv('downloaded_data/dice_data', encoding='ascii')
     city_mapping = pd.read_csv('predefined_data/state_url_mapping.csv')

@@ -1,5 +1,13 @@
+'''
+Jas Haria - jharia
+Vaibhav Gaur - vgaur
+Ryan Wang - zhenxi
+Victor Wang - hanmingw
+'''
+
 import requests
 
+# downloads file from specified url
 def download_file(url, filename):
     try:
         req = requests.get(url)
@@ -14,7 +22,8 @@ def download_file(url, filename):
     except Exception as e:
         print(e)
         return None
-            
+  
+# updates tax data          
 def update_tax_data():
     state_individual_income_tax = 'https://files.taxfoundation.org/20210217114700/State-Individual-Income-Tax-Rates-and-Brackets-for-2021.xlsx'
     fed_income_tax = 'https://files.taxfoundation.org/20210203150250/2021-Federal-Income-Tax-Rates-and-Brackets1.xlsx'
