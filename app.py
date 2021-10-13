@@ -16,6 +16,17 @@ This refresh takes more than 3 hours on a good day.
 Are you sure you wanna go ahead? (y/n)
 '''
 
+starting_prompt = '''
+Welcome to Jobs And More
+To serve you better, we need some information from you!
+Funny question to start with, but are you married?(y/n)
+'''
+
+second_prompt = '''
+Thanks for that, your data will be safe with us, prmomise!
+Next, can you tell us how many rooms do you require in your house?(1/2/3)
+'''
+
 
 def refresh_stats():
     print('Scraping jobs from dice.com ...')
@@ -31,6 +42,12 @@ def refresh_stats():
     print('All data successfully updated!')
 
 if __name__ == '__main__':
+    '''status = input(starting_prompt)
+    if status == 'y':
+        married = True
+    else:
+        married = False
+    rooms = int(input(second_prompt))'''
     while True:
         val = input(input_prompt)
         if val == '1':
